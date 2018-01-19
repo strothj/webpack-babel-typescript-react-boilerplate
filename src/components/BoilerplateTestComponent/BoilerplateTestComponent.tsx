@@ -1,10 +1,9 @@
-/* tslint:disable:strict-boolean-expressions */
 import * as React from "react";
 
-import * as smallImage from "./pexels-photo-270348.small.jpeg";
-import * as largeImage from "./pexels-photo-270348.jpeg";
+import * as smallImage from "./assets/pexels-photo-270348.small.jpeg";
+import * as largeImage from "./assets/pexels-photo-270348.jpeg";
 
-class PlaceholderComponent extends React.Component {
+class BoilerplateTestComponent extends React.Component {
   state = { elapsed: 0, ComponentTitle: null as React.ComponentType | null };
 
   private interval: number;
@@ -19,7 +18,7 @@ class PlaceholderComponent extends React.Component {
     }, 1000);
 
     // async import - verify async loaded component loads correctly
-    import(/* webpackChunkName: "componentTitle" */ "./ComponentTitle").then(
+    import(/* webpackChunkName: "asyncLoadedComponentTitle" */ "./AsyncLoadedComponentTitle").then(
       mod => {
         // console.log("### mod ###", mod);
         this.setState({ ComponentTitle: mod.default });
@@ -32,6 +31,7 @@ class PlaceholderComponent extends React.Component {
   }
 
   render() {
+    /* tslint:disable:strict-boolean-expressions */
     return (
       <>
         {this.state.ComponentTitle && (
@@ -47,7 +47,8 @@ class PlaceholderComponent extends React.Component {
         <img src={largeImage} style={{ width: 100 }} />
       </>
     );
+    /* tslint:enable:strict-boolean-expressions */
   }
 }
 
-export default PlaceholderComponent;
+export default BoilerplateTestComponent;

@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
-import PlaceholderComponent from "./PlaceholderComponent";
+import BoilerplateTestComponent from "./BoilerplateTestComponent";
 
 it("renders", done => {
-  const component = renderer.create(<PlaceholderComponent />);
+  const component = renderer.create(<BoilerplateTestComponent />);
   setTimeout(() => {
     expect(component.toJSON()).toMatchSnapshot();
   }, 1);

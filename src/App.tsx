@@ -1,6 +1,6 @@
 import * as React from "react";
-import PlaceholderComponent from "./components/PlaceholderComponent";
+import BoilerplateTestComponent from "components/BoilerplateTestComponent";
 
-const App = () => <PlaceholderComponent />;
+const App = () => <BoilerplateTestComponent />;
 
 export default App;
