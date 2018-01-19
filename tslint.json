@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint-config-airbnb", "tslint-config-prettier"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "strict-boolean-expressions": [true, "allow-undefined-union"],
+    "import-name": false,
+    "variable-name": false,
+    "prettier": true
+  }
+}

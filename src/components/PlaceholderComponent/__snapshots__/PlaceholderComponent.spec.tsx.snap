@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+Array [
+  "App Component",
+  <br />,
+  "Seconds: ",
+  "0",
+  <br />,
+  <img
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  />,
+  <br />,
+  <img
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  />,
+]
+`;
+
+exports[`renders 2`] = `
+Array [
+  "App Component",
+  <br />,
+  "Seconds: ",
+  "1",
+  <br />,
+  <img
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  />,
+  <br />,
+  <img
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  />,
+]
+`;
