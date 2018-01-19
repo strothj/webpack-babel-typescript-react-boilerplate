@@ -158,8 +158,16 @@ const getPublicPath = (production: boolean): string => {
   return publicPath.endsWith("/") ? publicPath : publicPath + "/";
 };
 
-// prettier-ignore
-type ConcatPluginKey = "common" | "production" | "notProduction" | "development" | "notDevelopment" | "watch" | "notWatch" | "analyze" | "notAnalyze";
+type ConcatPluginKey =
+  | "common"
+  | "production"
+  | "notProduction"
+  | "development"
+  | "notDevelopment"
+  | "watch"
+  | "notWatch"
+  | "analyze"
+  | "notAnalyze";
 type PTable = Partial<Record<ConcatPluginKey, webpack.Plugin[]>>;
 
 const concatPlugins = (env: Env, pluginsTable: PTable): webpack.Plugin[] => {

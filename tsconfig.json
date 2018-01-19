@@ -16,5 +16,10 @@
     "noFallthroughCasesInSwitch": true,
     "plugins": [{ "name": "tslint-language-service" }]
   },
-  "include": ["./src/**/*", "./.storybook/**/*", "./type-definitions/**/*"]
+  "include": [
+    "./src/**/*",
+    "./.storybook/**/*",
+    "./type-definitions/**/*",
+    "./webpack.config.ts"
+  ]
 }
