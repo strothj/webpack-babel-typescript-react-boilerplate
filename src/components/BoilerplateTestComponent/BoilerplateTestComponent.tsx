@@ -1,7 +1,14 @@
 import * as React from "react";
+import styled, { withProps } from "styled";
 
 import * as smallImage from "./assets/pexels-photo-270348.small.jpeg";
 import * as largeImage from "./assets/pexels-photo-270348.jpeg";
+
+// Making sure withProps is available (correct package aliasing).
+export const SecondsCounterText = withProps<{ bold: boolean }>()(styled.span)`
+  color: ${props => props.theme.boilerplateTestComponentColor};
+  font-weight: ${props => (props.bold ? "600" : "400")};
+`;
 
 class BoilerplateTestComponent extends React.Component {
   state = { elapsed: 0, ComponentTitle: null as React.ComponentType | null };
@@ -40,7 +47,9 @@ class BoilerplateTestComponent extends React.Component {
             <br />
           </>
         )}
-        Seconds: {this.state.elapsed}
+        <SecondsCounterText bold>
+          Seconds: {this.state.elapsed}
+        </SecondsCounterText>
         <br />
         <img src={smallImage} style={{ width: 100 }} />
         <br />

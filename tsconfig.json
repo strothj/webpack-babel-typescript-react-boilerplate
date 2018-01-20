@@ -14,7 +14,10 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "plugins": [{ "name": "tslint-language-service" }]
+    "plugins": [{ "name": "tslint-language-service" }],
+    "paths": {
+      "styled": ["./display/styled-components"]
+    }
   },
   "include": [
     "./src/**/*",

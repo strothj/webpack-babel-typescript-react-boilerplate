@@ -2,6 +2,7 @@
 import * as path from "path";
 import * as webpack from "webpack";
 import * as genDefaultConfig from "@storybook/react/dist/server/config/defaults/webpack.config";
+import { withStyledComponentsThemingAlias } from "../webpack.config";
 
 export default (baseConfig: Configuration, env: any): Configuration => {
   const config: webpack.Configuration = genDefaultConfig(baseConfig, env);
@@ -29,6 +30,9 @@ export default (baseConfig: Configuration, env: any): Configuration => {
     },
   );
 
+  // Add Styled Components theming alias.
+  config.resolve = withStyledComponentsThemingAlias(config.resolve);
+
   // Add ignore-loader to prevent re-transpile of Webpack config in .storybook.
   config.resolveLoader = config.resolveLoader || {};
   const { resolveLoader } = config;
@@ -38,6 +42,7 @@ export default (baseConfig: Configuration, env: any): Configuration => {
   config.resolve = config.resolve || {};
   config.resolve.extensions = config.resolve.extensions || [];
   config.resolve.extensions.push(".ts", ".tsx");
+  config.resolve.modules!.push(path.resolve(__dirname, "../src"));
 
   // Quiet console output from Webpack Dev Middleware.
   const { entry } = config;

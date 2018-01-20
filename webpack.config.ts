@@ -82,10 +82,10 @@ const createConfig = (env = defaultEnvironment): webpack.Configuration => ({
     ],
   },
 
-  resolve: {
+  resolve: withStyledComponentsThemingAlias({
     extensions: [".ts", ".tsx", ".js"],
     modules: ["node_modules", path.resolve(__dirname, "src")],
-  },
+  }),
 
   plugins: concatPlugins(env, {
     common: [
@@ -184,6 +184,19 @@ const concatPlugins = (env: Env, pluginsTable: PTable): webpack.Plugin[] => {
 
   return plugins;
 };
+
+// Exported for use with Storybook config.
+// prettier-ignore
+/* tslint:disable:strict-boolean-expressions */
+export const withStyledComponentsThemingAlias = (
+  resolve: webpack.Resolve | undefined,
+): webpack.Resolve => {
+  const resolveSC: webpack.Resolve = resolve || {};
+  resolveSC.alias = resolveSC.alias || {};
+  resolveSC.alias["styled$"] = path.resolve(__dirname, "src/display/styled-components");
+  return resolveSC;
+};
+/* tslint:enable:strict-boolean-expressions */
 
 const getHtmlMinificationConfig = (production: boolean) =>
   production

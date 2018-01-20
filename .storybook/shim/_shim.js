@@ -2,7 +2,7 @@ const path = require("path");
 
 require("@babel/register")({
   extensions: [".ts", ".tsx"],
-  only: [/\.storybook[\\\/].+\.tsx?/],
+  only: [/\.storybook[\\\/].+\.tsx?/, /webpack\.config\.ts/],
 });
 
 module.exports = req => {

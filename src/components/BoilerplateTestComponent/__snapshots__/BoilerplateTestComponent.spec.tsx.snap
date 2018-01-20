@@ -1,11 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders 1`] = `
+exports[`renders loads subcomponent asynchronously 1`] = `
 Array [
-  "App Component",
-  <br />,
-  "Seconds: ",
-  "0",
+  .c0 {
+  color: #eee;
+  font-weight: 600;
+}
+
+<span
+    className="c0"
+  >
+    Seconds: 
+    0
+  </span>,
   <br />,
   <img
     src={
@@ -35,12 +42,65 @@ Array [
 ]
 `;
 
-exports[`renders 2`] = `
+exports[`renders loads subcomponent asynchronously 2`] = `
 Array [
   "App Component",
   <br />,
-  "Seconds: ",
-  "1",
+  .c0 {
+  color: #eee;
+  font-weight: 600;
+}
+
+<span
+    className="c0"
+  >
+    Seconds: 
+    0
+  </span>,
+  <br />,
+  <img
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  />,
+  <br />,
+  <img
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
+    style={
+      Object {
+        "width": 100,
+      }
+    }
+  />,
+]
+`;
+
+exports[`renders loads subcomponent asynchronously 3`] = `
+Array [
+  "App Component",
+  <br />,
+  .c0 {
+  color: #eee;
+  font-weight: 600;
+}
+
+<span
+    className="c0"
+  >
+    Seconds: 
+    1
+  </span>,
   <br />,
   <img
     src={
