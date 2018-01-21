@@ -16,8 +16,12 @@ const ThemeProvider: React.SFC<{}> = props => (
 
 /* tslint:disable-next-line:no-unused-expression */
 injectGlobal`
-  html{
-    box-sizing: border-box
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 `;
 
