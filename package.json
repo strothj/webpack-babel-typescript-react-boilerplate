@@ -23,8 +23,8 @@
     "lint": "tslint -t verbose -p ./",
     "start": "npm-run-all clean start:webpack",
     "start:webpack": "webpack-dev-server --env.watch",
-    "storybook": "start-storybook -p 9001 -c .storybook/shim",
-    "storybook:build": "build-storybook -c .storybook/shim -o dist/storybook",
+    "storybook": "start-storybook -p 9001 -c node_modules/storybook-babel-typescript-shim",
+    "storybook:build": "build-storybook -c node_modules/storybook-babel-typescript-shim -o dist/storybook",
     "test": "jest --config jest.config.js",
     "type-check": "tsc"
   },
@@ -66,6 +66,7 @@
     "react-dev-utils": "^5.0.0",
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
+    "storybook-babel-typescript-shim": "^1.0.0",
     "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
     "tslint-config-airbnb": "https://github.com/strothj/tslint-config-airbnb.git",

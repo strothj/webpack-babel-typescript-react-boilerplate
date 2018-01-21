@@ -1,11 +1,11 @@
 /* tslint:disable:strict-boolean-expressions */
 import * as path from "path";
 import * as webpack from "webpack";
-import * as genDefaultConfig from "@storybook/react/dist/server/config/defaults/webpack.config";
+import { genDefaultConfig } from "storybook-babel-typescript-shim";
 import { withStyledComponentsThemingAlias } from "../webpack.config";
 
 export default (baseConfig: Configuration, env: any): Configuration => {
-  const config: webpack.Configuration = genDefaultConfig(baseConfig, env);
+  const config = genDefaultConfig(baseConfig, env);
 
   const { module } = baseConfig;
   if (!isNewModule(module)) throw shapeError;
@@ -18,26 +18,14 @@ export default (baseConfig: Configuration, env: any): Configuration => {
   if (initialRulesCount === module.rules.length) throw shapeError;
 
   // Insert Babel 7 config with TypeScript support.
-  module.rules.push(
-    {
-      test: /\.[jt]sx?/,
-      exclude: [/node_modules/, /\.storybook*.webpack.config.ts/],
-      loader: "babel-loader",
-    },
-    {
-      test: /\.storybook*.webpack.config.ts/,
-      loader: "ignore-loader",
-    },
-  );
+  module.rules.push({
+    test: /\.[jt]sx?$/,
+    exclude: [/node_modules/],
+    loader: "babel-loader",
+  });
 
   // Add Styled Components theming alias.
   config.resolve = withStyledComponentsThemingAlias(config.resolve);
-
-  // Add ignore-loader to prevent re-transpile of Webpack config in .storybook.
-  config.resolveLoader = config.resolveLoader || {};
-  const { resolveLoader } = config;
-  resolveLoader.modules = resolveLoader.modules || ["node_modules"];
-  resolveLoader.modules.push(path.resolve(__dirname, "./shim"));
 
   config.resolve = config.resolve || {};
   config.resolve.extensions = config.resolve.extensions || [];

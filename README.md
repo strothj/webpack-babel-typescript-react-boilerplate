@@ -1,4 +1,4 @@
-# webpack-babel-7-typescript-react-boilerplate
+# [webpack-babel-typescript-react-boilerplate]
 
 Boilerplate project for bootstrapping a React project using the Typescript transform with Babel 7.
 
@@ -21,6 +21,7 @@ This is a personal project for my use in bootstrapping projects. If you find it 
 * `storybook` - Using a shim in the `.storybook/shim` directory to bridge the ES6/Babel config loading with TypeScript. Ideally, the project would use the [interpret package] like Webpack does.
 * `jest` - Currently relying on [`"babel-core": "^7.0.0-bridge.0"`][babel-core-bridge] to make compatible with [Jest][jest-babel].
 
+[webpack-babel-typescript-react-boilerplate]: https://github.com/strothj/webpack-babel-typescript-react-boilerplate
 [issue #26]: https://github.com/progre/tslint-config-airbnb/issues/26
 [interpret package]: https://github.com/js-cli/js-interpret
 [babel-core-bridge]: https://babeljs.io/blog/2017/09/12/planning-for-7.0
