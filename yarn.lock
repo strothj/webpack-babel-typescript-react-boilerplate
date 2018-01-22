@@ -5291,9 +5291,9 @@ jest-snapshot@^22.1.2:
     natural-compare "^1.4.0"
     pretty-format "^22.1.0"
 
-jest-styled-components@^4.10.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-4.10.0.tgz#6fcd83208fefc4ceb87b79b55d44697a05d226a8"
+jest-styled-components@^4.11.0-0:
+  version "4.11.0-0"
+  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-4.11.0-0.tgz#c1c2483ccc2561ea1267dc4d3242f55ba262d14e"
   dependencies:
     css "^2.2.1"
 
@@ -8176,9 +8176,9 @@ style-loader@^0.19.1:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
-styled-components@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.4.0.tgz#086d0fd483d54638837fca3ea546a030b94adf75"
+styled-components@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.0.2.tgz#dbcd66ee84d444ee4332a7f74027e8a675191593"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
