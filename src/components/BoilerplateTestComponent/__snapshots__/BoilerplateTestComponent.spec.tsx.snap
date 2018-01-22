@@ -39,6 +39,11 @@ Array [
       }
     }
   />,
+  <br />,
+  <p>
+    NODE_ENV: 
+    test
+  </p>,
 ]
 `;
 
@@ -83,6 +88,11 @@ Array [
       }
     }
   />,
+  <br />,
+  <p>
+    NODE_ENV: 
+    test
+  </p>,
 ]
 `;
 
@@ -127,5 +137,10 @@ Array [
       }
     }
   />,
+  <br />,
+  <p>
+    NODE_ENV: 
+    test
+  </p>,
 ]
 `;

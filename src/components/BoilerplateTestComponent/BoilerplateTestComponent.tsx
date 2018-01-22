@@ -54,6 +54,8 @@ class BoilerplateTestComponent extends React.Component {
         <img src={smallImage} style={{ width: 100 }} />
         <br />
         <img src={largeImage} style={{ width: 100 }} />
+        <br />
+        <p>NODE_ENV: {process.env.NODE_ENV}</p>
       </>
     );
     /* tslint:enable:strict-boolean-expressions */
