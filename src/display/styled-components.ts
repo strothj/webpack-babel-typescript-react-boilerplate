@@ -7,6 +7,7 @@
 import * as styledComponents from "styled-components";
 import { ThemedStyledComponentsModule } from "styled-components";
 import { Theme } from "./theme";
+import { ThemeMediaQueries } from "./themeMediaQueries";
 
 const {
   default: styled,
@@ -14,10 +15,15 @@ const {
   injectGlobal,
   keyframes,
   ThemeProvider,
-} = styledComponents as ThemedStyledComponentsModule<Theme>;
+} = styledComponents as ThemedStyledComponentsModule<
+  Theme & { media: ThemeMediaQueries }
+>;
 
 // https://github.com/styled-components/styled-components/issues/630
-type ThemedStyledFunction<T> = styledComponents.ThemedStyledFunction<T, Theme>;
+type ThemedStyledFunction<T> = styledComponents.ThemedStyledFunction<
+  T,
+  Theme & { media: ThemeMediaQueries }
+>;
 
 const withProps = <U>() => <P>(fn: ThemedStyledFunction<P>) =>
   fn as ThemedStyledFunction<P & U>;

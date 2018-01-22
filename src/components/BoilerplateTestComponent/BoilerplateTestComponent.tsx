@@ -8,6 +8,10 @@ import * as largeImage from "./assets/pexels-photo-270348.jpeg";
 export const SecondsCounterText = withProps<{ bold: boolean }>()(styled.span)`
   color: ${props => props.theme.boilerplateTestComponentColor};
   font-weight: ${props => (props.bold ? "600" : "400")};
+
+  ${props => props.theme.media.min.tablet`
+    font-size: 24px;
+  `}
 `;
 
 class BoilerplateTestComponent extends React.Component {

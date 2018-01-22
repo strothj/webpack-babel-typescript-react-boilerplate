@@ -7,6 +7,12 @@ Array [
   font-weight: 600;
 }
 
+@media (min-width:768px) {
+  .c0 {
+    font-size: 24px;
+  }
+}
+
 <span
     className="c0"
   >
@@ -56,6 +62,12 @@ Array [
   font-weight: 600;
 }
 
+@media (min-width:768px) {
+  .c0 {
+    font-size: 24px;
+  }
+}
+
 <span
     className="c0"
   >
@@ -103,6 +115,12 @@ Array [
   .c0 {
   color: #eee;
   font-weight: 600;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: 24px;
+  }
 }
 
 <span

@@ -4,9 +4,10 @@ import {
   ThemeProvider as StyledComponentsThemeProvider,
 } from "styled";
 import theme from "./theme";
+import themeMediaQueries from "./themeMediaQueries";
 
 const ThemeProvider: React.SFC<{}> = props => (
-  <StyledComponentsThemeProvider theme={theme}>
+  <StyledComponentsThemeProvider theme={{ ...theme, media: themeMediaQueries }}>
     <>
       {/* react-helmet, ... */}
       {props.children}
