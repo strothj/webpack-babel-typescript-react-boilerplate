@@ -116,6 +116,7 @@ const createConfig = (env = defaultEnvironment): webpack.Configuration => ({
       new HtmlPlugin({
         filename: path.resolve(__dirname, "dist/index.html"),
         template: path.resolve(__dirname, "public/index.demo.html"),
+        inject: false,
       }),
     ],
     watch: [
