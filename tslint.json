@@ -1,5 +1,9 @@
 {
-  "extends": ["tslint-config-airbnb", "tslint-config-prettier"],
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
   "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
     "strict-boolean-expressions": [true, "allow-undefined-union"],
