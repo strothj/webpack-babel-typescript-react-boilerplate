@@ -64,7 +64,7 @@ const createConfig = (env = defaultEnvironment): webpack.Configuration => ({
             },
           },
           {
-            test: /\.[jt]sx?/,
+            test: /\.[jt]sx?$/,
             exclude: /node_modules/,
             use: "babel-loader",
           },
